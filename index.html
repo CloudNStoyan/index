@@ -2,13 +2,18 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>CloudNStoyan's site</title>
+        <title>LOL Profile</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <span>Hello World</span>
-        <input type="text" id="input" /><button type="button" id="btn"> Enter </button>
-
-
+        <form class="main-form" style="margin:auto;max-width:300px">
+            <input type="text" placeholder="Search.." id="name-input">
+            <button type="button" id="name-submit"><i class="fa fa-search"></i></button>
+            <select title="Select from last searches..." id="last-names" style="">
+                <option>Dwarfs</option>
+            </select>
+        </form>
         <script src="main.js"></script>
     </body>
 </html>
