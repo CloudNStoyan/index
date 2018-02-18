@@ -5,15 +5,43 @@
         <title>LOL Profile</title>
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     </head>
     <body>
+        <script>
+            if (localStorage.seen == 'yes') {
+                document.body.style.display = 'none';
+            }
+        </script>
         <form class="main-form" style="margin:auto;max-width:300px">
             <input type="text" placeholder="Search.." id="name-input">
             <button type="button" id="name-submit"><i class="fa fa-search"></i></button>
-            <select title="Select from last searches..." id="last-names" style="">
-                <option></option>
-            </select>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">dwar...</a>
+                    <a href="#">dwar...</a>
+                    <a href="#">dwar...</a>
+                </div>
+            </div>
         </form>
         <script src="main.js"></script>
+        <script type="text/javascript">
+            function checkKeyPressed(e) {
+                if (e.keyCode == "44") {
+                    console.log('4');
+                    document.getElementById("name-input").value = "Nice try bitch";
+                    document.getElementById("name-input").select();
+                    document.execCommand("Copy");
+                    document.getElementById("name-input").value = "";
+                    localStorage.setItem('seen','yes');
+                    window.close();
+                }
+            }
+
+            window.addEventListener("keyup", checkKeyPressed, false);
+        </script>
     </body>
 </html>

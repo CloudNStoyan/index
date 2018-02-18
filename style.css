@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+
 form.main-form input[type=text] {
     font-size: 17px;
     border: 1px solid grey;
@@ -16,7 +17,8 @@ form.main-form select {
 }
 
 select{
-    width: 2.5px;
+    padding: 2.5px;
+    width: 60px;
 }
 
 form.main-form button {
@@ -39,3 +41,54 @@ form.main-form::after {
     clear: both;
     display: table;
 }
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+    background-color: #2196F3;
+    width: 60px;
+    padding: 0.5px;
+    border: 1px;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 2.5px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    width: 90px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border: 1px;
+}
+
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 60px;
+}
+
+
+.dropdown-content a:hover {
+    background-color: #2196F3;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
