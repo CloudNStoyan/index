@@ -5,23 +5,33 @@
         <title>LOL Profile</title>
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     </head>
     <body>
-        <form class="main-form" style="margin:auto;max-width:300px">
+        <form class="main-form" autocomplete="off" style="margin:auto;max-width:300px">
             <input type="text" placeholder="Search.." id="name-input">
-            <button type="submit" id="name-submit" onclick="return false"><i class="fa fa-search"></i></button>
+            <button id="name-submit"><i class="fa fa-search"></i></button>
             <div class="dropdown">
-                <button class="dropbtn">
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#">dwar...</a>
-                    <a href="#">dwar...</a>
-                    <a href="#">dwar...</a>
+                <button class="drop-menu-button">
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                    <a href="#">dwarfe..</a>
+                    <a href="#">dwarfe..</a>
+                    <a href="#">dwarfe..</a>
                 </div>
             </div>
         </form>
+        <div id="profile-information">
+            <div id="current-rank">
+                <div id="solo-queue">
+                    <img src="http://opgg-static.akamaized.net/images/medals/gold_3.png" title="Gold 3 Solo Queue" />
+                </div>
+                <div id="flex-queue">
+                    <img src="http://opgg-static.akamaized.net/images/medals/silver_3.png" title="Silver 3 Solo Queue" />
+                </div>
+            </div>
+            <div id="previously-rank"></div>
+        </div>
         <script src="main.js"></script>
     </body>
 </html>
